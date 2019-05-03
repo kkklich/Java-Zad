@@ -1,0 +1,81 @@
+package com.company;
+
+public class Main {
+
+
+    private char aChar;
+
+    private static  String[] spli2(char [] znaczek, String slowo1)
+    {
+/*3. Napisaæ funkcjê split2, która dzia³a podobnie, jak funkcja split (pozwalaj¹cej na podzielenie ³añcucha znaków na pod
+³añcuchy (wzglêdem podanego znaku / ci¹gu znaków) i zwrócenie ich w postaci tablicy ³añcuchów znaków), ale tym
+razem podzia³ ³añcucha dokonywany mo¿e byæ wzglêdem wielu znaków / ci¹gów znaków (przekazanych w tablicy
+znaków). Przyk³adowa deklaracja funkcji:
+String[] split2(String str, String[] tStr);*/
+
+
+
+        char [] tabzank=znaczek;
+
+
+        int dltabznak=0;
+
+        String slowo=slowo1;
+        int dlugosc=slowo.length();
+        int ileznakow=0;
+        String [] tablica=new String[10];
+        String temptekst="";
+        String znak="";
+        boolean czyjestzank=false;
+
+
+        for(int i=0;i<dlugosc;i++)
+        {
+            String wyraz=""+slowo.charAt(i);
+
+
+            for(int j=0;j<tabzank.length;j++) {
+                znak=""+tabzank[j];
+                if(znak!=null) {
+                    if (wyraz.equals(znak)) {
+                        ileznakow++;
+                        temptekst = "";
+                        czyjestzank=true;
+                    }
+                }
+            }
+                if(czyjestzank==false) {
+                    temptekst = temptekst + slowo.charAt(i);
+                    tablica[ileznakow] = temptekst;
+
+                }
+                czyjestzank=false;
+
+        }
+            return  tablica;
+
+
+    }
+
+
+    public static void main(String[] args) {
+	// write your code here
+
+
+        char []tabzank=new char[12];
+        tabzank[0]=' ';
+        tabzank[1]='k';
+        tabzank[2]='z';
+        String[] tablica=new String[100];
+        String slowo="Czesc jestem krzys";
+
+        tablica=spli2(tabzank,slowo);
+
+        for(int i=0;i<tablica.length;i++)
+        {
+            if(tablica[i]!=null)
+            System.out.println(tablica[i]);
+        }
+
+    }
+}

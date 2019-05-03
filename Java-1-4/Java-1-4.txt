@@ -1,0 +1,73 @@
+package com.company;
+
+import  java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code
+
+        /*
+        * 4. Napisaæ program, który wczytuje dwie liczby naturalne oznaczaj¹ce numer roku i wyœwietlaj¹cy ³¹czn¹
+liczbê dni od 1 stycznia pierwszego podanego roku do 31 grudnia drugiego podanego roku. Nale¿y
+uwzglêdniæ lata przestêpne. Rok jest przestêpny je¿eli jest podzielny przez 4, ale nie jest podzielny przez
+100, lub jest podzielny przez 400. Lata przestêpne maj¹ 366 dni, natomiast pozosta³e 365.
+Przyk³adowo je¿eli u¿ytkownik poda 2000 i 2007, wynikiem powinno byæ 2922
+(bo 366 + 3 * 365 + 366 + 3 * 365).
+Inny przyk³ad, je¿eli u¿ytkownik poda 1945 i 1945, to wynikiem powinno byæ 365.
+        * */
+
+
+        System.out.println("Zad 3 Zetstaw 1 ");
+        System.out.println("Obliczanie ilosci dni pomiêdzy rokami");
+
+        Scanner scan=new Scanner((System.in));
+
+        System.out.print("Podaj pierwszy rok: ");
+        int pierwszyrok=scan.nextInt();
+        int drugirok=0;
+
+
+        do {
+            System.out.print("Podaj drugi rok: ");
+            drugirok=scan.nextInt();
+        }while (drugirok<pierwszyrok);
+
+
+        int suma=0;
+
+
+        for (int i=pierwszyrok;i<=drugirok;i++)
+        {
+
+                if (i % 4 == 0)
+                {
+
+                    if(i%100==0)
+                    {
+
+                        if(i%400==0)
+                        {
+                            suma = suma + 366;
+                        }
+                        else {
+                            suma = suma + 365;
+                        }
+                    }
+                    else
+                    {
+                        suma = suma + 366;
+                    }
+
+                }
+                else
+                    {
+                    suma = suma + 365;
+                }
+
+        }
+
+        System.out.println("Ilosc dni: "+suma);
+
+    }
+}

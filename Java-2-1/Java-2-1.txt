@@ -1,0 +1,89 @@
+package com.company;
+
+import java.util.Scanner;
+import  java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+
+
+
+        /* 1. Napisaæ program, który tworzy dwuwymiarow¹ tablicê liczb ca³kowitych o losowej wielkoœci wymiaru (wylosowanej
+z zakresu [50, 100] i podzielnej przez 4), gdzie liczba wierszy jest równa liczbie kolumn. Nastêpnie tablica zostaje
+wype³niona liczbami losowymi, z wyj¹tkiem elementów znajduj¹cych siê na przek¹tnych. Liczby maj¹ byæ losowane z
+zakresu [a, b), gdzie liczby a i b podawane s¹ przez u¿ytkownika. Wartoœci na przek¹tnych maj¹ byæ wype³nione w
+losowym uk³adzie w 75% przypadków cyfr¹ 1, a w pozosta³ych 25% przypadków wartoœci¹ -1.
+Program powinien wyœwietliæ na ekran liczbê komórek, których wartoœæ jest mniejsza od iloczynu indeksu wiesza i
+kolumny tej komórki.*/
+
+        Random r=new Random();
+        int rand;
+        do{
+            rand= r.nextInt(50) + 50;
+
+        }while (rand%4!=0);
+
+        System.out.println(rand);
+
+        int [][] tablica=new int[rand][rand];
+
+        Scanner in=new Scanner((System.in));
+        int a,b,c;
+
+        System.out.print("Podaj pocz¹tek przedzialu: ");
+        a=in.nextInt();
+        System.out.print("Podaj koniec przedzia³u: ");
+        b=in.nextInt();
+        if(b<=a)
+        {
+            System.out.print("Druga liczba musi byc wieksza od pierwszej, podaj jeszcze raz");
+            b=in.nextInt();
+        }
+
+        c=b-a;
+       // rand=4;
+
+        int liczba;
+
+
+
+
+        int nrprzekatnej=0;
+        int iloczyn,ilosc=0;
+
+        for (int i=0;i<rand;i++)
+        {
+            for (int j=0;j<rand;j++)
+            {
+                if(i==j || i+j==rand-1) {
+
+
+                    liczba=r.nextInt(100);
+                    if(liczba<25)
+                    {
+                        tablica[i][j]=-1;
+                    }
+                    else
+                    {
+                        tablica[i][j]=1;
+                    }
+
+                }
+                else {
+                    tablica[i][j] = r.nextInt(c) + a;
+                }
+
+                iloczyn=i*j;
+                if(tablica[i][j]<iloczyn) {
+                    ilosc++;
+                }
+                System.out.print(tablica[i][j]+" ");
+            }
+            System.out.println("");
+        }
+
+        System.out.print("Ilosc liczb mniejszych od iloczyny"+ilosc);
+    }
+}

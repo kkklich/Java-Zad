@@ -1,0 +1,59 @@
+package com.company;
+
+import  java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+
+        Scanner scan=new Scanner((System.in));
+
+
+        System.out.println("Zad 3  Program sprawdza czy liczba jest podzielna przez 3");
+        System.out.print("Podaj liczbê: ");
+
+        long liczba=scan.nextLong();
+        long suma=0;
+        long potega;
+        long b=0;
+        long cyfra=0;
+        do {
+
+            String a=Long.toString(liczba);
+            int ile=a.length();
+            System.out.println("dlugosc: "+ile);
+            b=0;
+            suma=0;
+                for (int i = ile; i > 0; i--)
+                {   potega = 1;
+                        for (int k = 1; k < i; k++)
+                        {
+                            potega = potega * 10;
+                        }
+
+                    cyfra= (liczba / (potega)) - b;
+                    b = (liczba / (potega)) * 10;
+                    suma = suma + cyfra;
+                    System.out.println(cyfra);
+
+               }
+                System.out.println("suma: "+suma);
+        liczba=suma;
+        }while (suma>=10);
+
+
+        System.out.println("suma wynosi: "+suma);
+
+        if(suma%3==0)
+        {
+            System.out.println("podzielna przez 3");
+        }
+        else
+        {
+            System.out.println("Liczba nie jest podzielna przez 3");
+        }
+
+
+    }
+}
