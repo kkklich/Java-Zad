@@ -5,11 +5,11 @@ package com.company;
 import java.io.*;
 import java.util.Scanner;
 
-// NapisaÄ‡ program, ktÃ³ry dla pliku tekstowego o podanej nazwie wyznaczy â€wykresâ€ czÄ™stoÅ›ci wystÄ…pieÅ„ maÅ‚ych liter alfabetu angielskiego. SÅ‚upki wykresu majÄ…
-//zostaÄ‡ utworzone ze znakÃ³w gwiazdki â€™*â€™, przy czym dÅ‚ugoÅ›Ä‡ sÅ‚upka dla najczÄ™Å›ciej
-//wystÄ™pujÄ…cej litery powinna wynosiÄ‡ 50. Dodatkowo dla kaÅ¼dego znaku naleÅ¼y dodatkowo wyÅ›wietliÄ‡ liczbÄ™ jego wystÄ…pieÅ„.
-//PoniÅ¼ej umieszczono przykÅ‚adowy wykres wygenerowany dla tekstu â€Adventures
-//of Huckleberry Finnâ€ M. Twaina dostÄ™pnego pod adresem:
+// Napisaæ program, który dla pliku tekstowego o podanej nazwie wyznaczy „wykres” czêstoœci wyst¹pieñ ma³ych liter alfabetu angielskiego. S³upki wykresu maj¹
+//zostaæ utworzone ze znaków gwiazdki ’*’, przy czym d³ugoœæ s³upka dla najczêœciej
+//wystêpuj¹cej litery powinna wynosiæ 50. Dodatkowo dla ka¿dego znaku nale¿y dodatkowo wyœwietliæ liczbê jego wyst¹pieñ.
+//Poni¿ej umieszczono przyk³adowy wykres wygenerowany dla tekstu „Adventures
+//of Huckleberry Finn” M. Twaina dostêpnego pod adresem:
 //http://www.gutenberg.org/dirs/7/76/76.txt
 //a ************************************* 36581
 //b ******* 7439
@@ -49,7 +49,7 @@ public class Main {
                 //System.out.println(slowo);
             }
 
-            System.out.println("ilosc maÅ‚ych liter: "+zdanie.length());
+            System.out.println("ilosc ma³ych liter: "+zdanie.length());
             System.out.println();
 
             int ile=0;

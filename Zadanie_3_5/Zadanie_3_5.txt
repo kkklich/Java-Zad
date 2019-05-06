@@ -4,22 +4,22 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import  java.io.*;
 
-//NapisaÄ‡ funkcjÄ™ emerytura(String nazwaPliku), ktÃ³ra wczyta z pliku o podanej
-//nazwie dane pracownikÃ³w zapisane w kolejnych wierszach w nastÄ™pujÄ…cy sposÃ³b:
-//ImiÄ™ Nazwisko PÅ‚eÄ‡ Wiek
-//PrzykÅ‚ad:
+//Napisaæ funkcjê emerytura(String nazwaPliku), która wczyta z pliku o podanej
+//nazwie dane pracowników zapisane w kolejnych wierszach w nastêpuj¹cy sposób:
+//Imiê Nazwisko P³eæ Wiek
+//Przyk³ad:
 //Tomasz Nowak M 45
 //Marta Ziobro K 42
 //Jan Kowalski M 27
 //Ewelina Tusk K 59
-//NastÄ™pnie funkcja dla kaÅ¼dego pracownika powinna wyznaczyÄ‡ ile lat pozostaÅ‚o
-//do jego emerytury. Wyniki naleÅ¼y zapisaÄ‡ w nastÄ™pujÄ…cy sposÃ³b:
-//Nazwisko ImiÄ™ â€Lata do emeryturyâ€
-//PrzykÅ‚ad:
+//Nastêpnie funkcja dla ka¿dego pracownika powinna wyznaczyæ ile lat pozosta³o
+//do jego emerytury. Wyniki nale¿y zapisaæ w nastêpuj¹cy sposób:
+//Nazwisko Imiê ”Lata do emerytury”
+//Przyk³ad:
 //Nowak Tomasz 20
 //Kowalski Jan 38
-//Wyniki dla kobiet naleÅ¼y zapisaÄ‡ w pliku o nazwie â€kobiety.txtâ€, natomiast wyniki
-//dla mÄ™Å¼czyzn naleÅ¼y zapisaÄ‡ w pliku â€mezczyzni.txtâ€.
+//Wyniki dla kobiet nale¿y zapisaæ w pliku o nazwie ”kobiety.txt”, natomiast wyniki
+//dla mê¿czyzn nale¿y zapisaæ w pliku ”mezczyzni.txt”.
 
 public class Main {
 
@@ -83,7 +83,7 @@ public class Main {
         }
         catch (InputMismatchException f)
         {
-            System.out.println("BÅ‚Ä™dne dane "+f.getMessage());
+            System.out.println("B³êdne dane "+f.getMessage());
         }
 
         finally {

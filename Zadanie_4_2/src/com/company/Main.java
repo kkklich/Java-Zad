@@ -2,7 +2,15 @@ package com.company;
 
 import  java.io.*;
 
-
+// Dany jest plik, w którym zapisano informacje o nieruchomościach w postaci kolejnych
+//trójek:
+//• String nazwDom;
+//• int lKondygn;
+//• BigDecimal cena;
+//Napisać funkcję zwiększającą o 15 procent cenę domów 2-piętrowych i wpisującą dane tych
+//domów do pliku tekstowego (dane o jednym domu w jednym wierszu; cena po zmianie) i
+//zwracającą jako swoją wartość liczbę domów, których cen nie zmieniono. Nazwy plików są
+//przekazywane przez parametry funkcji.
 public class Main {
 
     public static void Odczyt(String nPL,String plikZapisz) throws IOException {

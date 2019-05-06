@@ -5,11 +5,11 @@ import java.util.Scanner;
 import java.io.*;
 
 
-//NapisaÄ‡ funkcjÄ™ public static void sumujIZapisz(String nazwaPliku) , ktÃ³ra odczytuje plik o podanej nazwie zawierajÄ…cy liczby caÅ‚kowite (po jednej w
-//wierszu). Funkcja ma za zadanie odczytaÄ‡ i zsumowaÄ‡ wszystkie liczby z pliku,
-//a nastÄ™pnie dopisaÄ‡ na koÅ„cu pliku wyznaczonÄ… sumÄ™ powiÄ™kszonÄ… o 1. Ponowne uruchomienia funkcji bÄ™dÄ… skutkowaÅ‚y dopisywaniem kolejnych wierszy. JeÅ¼eli
-//plik nie istnieje to ma zostaÄ‡ utworzony â€“ suma dla pustego pliku wyniesie 0, a
-//wiÄ™c naleÅ¼y dopisaÄ‡ wiersz zawierajÄ…cy 1.
+//Napisaæ funkcjê public static void sumujIZapisz(String nazwaPliku) , która odczytuje plik o podanej nazwie zawieraj¹cy liczby ca³kowite (po jednej w
+//wierszu). Funkcja ma za zadanie odczytaæ i zsumowaæ wszystkie liczby z pliku,
+//a nastêpnie dopisaæ na koñcu pliku wyznaczon¹ sumê powiêkszon¹ o 1. Ponowne uruchomienia funkcji bêd¹ skutkowa³y dopisywaniem kolejnych wierszy. Je¿eli
+//plik nie istnieje to ma zostaæ utworzony – suma dla pustego pliku wyniesie 0, a
+//wiêc nale¿y dopisaæ wiersz zawieraj¹cy 1.
 
 public class Main {
 

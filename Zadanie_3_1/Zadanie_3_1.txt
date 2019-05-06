@@ -6,12 +6,12 @@ import java.util.NoSuchElementException;
 import java.io.IOException;
 
 
-// NapisaÄ‡ funkcjÄ™ liczZnakiSlowa, ktÃ³ra zlicza:
-//â€¢ liczbÄ™ znakÃ³w w pliku,
-//â€¢ liczbÄ™ biaÅ‚ych znakÃ³w w pliku (biaÅ‚e znaki to spacja, tabulator, znacznik
-//koÅ„ca wiersza),
-//â€¢ liczbÄ™ sÅ‚Ã³w w pliku.
-//Wynikiem funkcji jest tablica zÅ‚oÅ¼ona z 3 liczb caÅ‚kowitych po jednej dla wymienionych podpunktÃ³w
+// Napisaæ funkcjê liczZnakiSlowa, która zlicza:
+//• liczbê znaków w pliku,
+//• liczbê bia³ych znaków w pliku (bia³e znaki to spacja, tabulator, znacznik
+//koñca wiersza),
+//• liczbê s³ów w pliku.
+//Wynikiem funkcji jest tablica z³o¿ona z 3 liczb ca³kowitych po jednej dla wymienionych podpunktów
 
 
 
@@ -98,12 +98,12 @@ public class Main {
 
 
 
-        System.out.println("Ilosc znakÃ³w: "+p.length());
+        System.out.println("Ilosc znaków: "+p.length());
 
         iloscSpacji=iloscSpacji+i;
         iloscSlow++;
-        System.out.println("Ilosc sÅ‚Ã³w: "+iloscSlow);
-        System.out.println("Ilosc biaÅ‚ych znakÃ³w: "+iloscSpacji);
+        System.out.println("Ilosc s³ów: "+iloscSlow);
+        System.out.println("Ilosc bia³ych znaków: "+iloscSpacji);
 
 
 

@@ -7,13 +7,13 @@ import java.io.*;
 
 //void szyfruj(String nazwaWe, int przesun)
 //void deszyfruj(String nazwaWe, int przesun)
-//Funkcja szyfruj dokonuje szyfrowania pliku, ktÃ³rego nazwa podana zostaÅ‚a jako
-//pierwszy parametr. Szyfrowanie polega na zamianie kaÅ¼dej litery na znak przesuniÄ™ty o wartoÅ›Ä‡ podanÄ… drugim parametrem np. dla przesuniÄ™cia rÃ³wnego 2 literka
-//â€™aâ€™ powinna zostaÄ‡ zastÄ…piona literkÄ… â€™câ€™, literka â€™zâ€™ literkÄ… â€™bâ€™ itp.
-//Wynikiem dziaÅ‚ania funkcji ma byÄ‡ plik o nazwie utworzonej na podstawie nazwy
-//pliku wejÅ›ciowego poprzez doÅ‚Ä…czenie znaku â€™ â€™ np. dla pliku dane.txt zaszyfrowana
-//postaÄ‡ powinna mieÄ‡ nazwÄ™ dane.txt. Funkcja deszyfruj powinna deszyfrowaÄ‡ plik
-//(niekoniecznie ten sam) zaszyfrowany przez funkcjÄ™ szyfruj.
+//Funkcja szyfruj dokonuje szyfrowania pliku, którego nazwa podana zosta³a jako
+//pierwszy parametr. Szyfrowanie polega na zamianie ka¿dej litery na znak przesuniêty o wartoœæ podan¹ drugim parametrem np. dla przesuniêcia równego 2 literka
+//’a’ powinna zostaæ zast¹piona literk¹ ’c’, literka ’z’ literk¹ ’b’ itp.
+//Wynikiem dzia³ania funkcji ma byæ plik o nazwie utworzonej na podstawie nazwy
+//pliku wejœciowego poprzez do³¹czenie znaku ’ ’ np. dla pliku dane.txt zaszyfrowana
+//postaæ powinna mieæ nazwê dane.txt. Funkcja deszyfruj powinna deszyfrowaæ plik
+//(niekoniecznie ten sam) zaszyfrowany przez funkcjê szyfruj.
 
 public class Main {
 

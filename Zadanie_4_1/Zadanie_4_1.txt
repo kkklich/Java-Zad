@@ -2,15 +2,15 @@ package com.company;
 
 import  java.io.*;
 
-// Dany jest plik, w ktÃ³rym zapisano (w postaci wewnÄ™trznej) kolejne trÃ³jki danych tworzÄ…ce
-//informacjÄ™ o budynkach:
-//â€¢ String nazwDom;
-//â€¢ int lKondygn;
-//â€¢ double cena;
-//NapisaÄ‡ funkcjÄ™ zmniejszajÄ…cÄ… (bezpoÅ›rednio w pliku, bez wczytywania caÅ‚ego pliku do
-//pamiÄ™ci) o 10 procent cenÄ™ domÃ³w
-//parterowych i zwracajÄ…cÄ… jako wartoÅ›Ä‡ nazwÄ™ domu (nazwDom) o najwiÄ™kszej liczbie
-//kondygnacji (jeÅ›li jest takich wiÄ™cej, to
+// Dany jest plik, w którym zapisano (w postaci wewnêtrznej) kolejne trójki danych tworz¹ce
+//informacjê o budynkach:
+//• String nazwDom;
+//• int lKondygn;
+//• double cena;
+//Napisaæ funkcjê zmniejszaj¹c¹ (bezpoœrednio w pliku, bez wczytywania ca³ego pliku do
+//pamiêci) o 10 procent cenê domów
+//parterowych i zwracaj¹c¹ jako wartoœæ nazwê domu (nazwDom) o najwiêkszej liczbie
+//kondygnacji (jeœli jest takich wiêcej, to
 //dowolny z nich). Nazwa pliku jest przekazana jako parametr funkcji.
 
 public class Main {

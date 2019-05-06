@@ -1,7 +1,16 @@
 package com.company;
 
 import  java.io.*;
-
+// Napisaæ funkcjê Kompresuj( String plikWej, String plikWyn ) przetwarzaj¹c¹ plik tekstowy
+//(plikWej) na plik obiektów (plikWyn). Przetwarzanie polega na zast¹pieniu ka¿dego ci¹gu
+//identycznych znaków pliku tekstowego obiektem zawieraj¹cym ten znak i liczbê jego
+//kolejnych wyst¹pieñ w tym ci¹gu. Koniec wiersza nale¿y traktowaæ jako pojedynczy znak CR.
+//znak liczba
+//Przyk³ad:
+//a_bbb_cccc
+//dd_e_ffffff
+//wynik (plik obiektowy z kolejnymi parami danych znak i liczba)::
+//a 1 _ 1 b 3 _ 1 c 3 CR 1 d 2 _ 1 e 1 _ 1 f 6
 
 public class Main {
 

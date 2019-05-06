@@ -2,58 +2,59 @@ package com.company;
 
 import  java.io.*;
 
-// Dany jest plik, w ktÃ³rym zapisano (w postaci wewnÄ™trznej) kolejne trÃ³jki danych tworzÄ…ce
-//informacjÄ™ o budynkach:
-//â€¢ String nazwDom;
-//â€¢ int lKondygn;
-//â€¢ double cena;
-//NapisaÄ‡ funkcjÄ™ zmniejszajÄ…cÄ… (bezpoÅ›rednio w pliku, bez wczytywania caÅ‚ego pliku do
-//pamiÄ™ci) o 10 procent cenÄ™ domÃ³w
-//parterowych i zwracajÄ…cÄ… jako wartoÅ›Ä‡ nazwÄ™ domu (nazwDom) o najwiÄ™kszej liczbie
-//kondygnacji (jeÅ›li jest takich wiÄ™cej, to
-//dowolny z nich). Nazwa pliku jest przekazana jako parametr funkcji.
-
+// Dany jest plik, w którym zapisano informacje o nieruchomoœciach w postaci kolejnych
+//trójek:
+//• String nazwDom;
+//• int lKondygn;
+//• BigDecimal cena;
+//Napisaæ funkcjê zwiêkszaj¹c¹ o 15 procent cenê domów 2-piêtrowych i wpisuj¹c¹ dane tych
+//domów do pliku tekstowego (dane o jednym domu w jednym wierszu; cena po zmianie) i
+//zwracaj¹c¹ jako swoj¹ wartoœæ liczbê domów, których cen nie zmieniono. Nazwy plików s¹
+//przekazywane przez parametry funkcji.
 public class Main {
 
-    public static void Odczyt(String nPL) throws IOException {
+    public static void Odczyt(String nPL,String plikZapisz) throws IOException {
 
 
         int maxkond=0;
         String maxdom="";
         RandomAccessFile plik=null;
+        RandomAccessFile plikZAP=null;
 
         try{
             System.out.println("nazwa  kond  cena");
             plik =new RandomAccessFile(nPL, "rw");
+            plikZAP=new RandomAccessFile(plikZapisz,"rw");
 
             plik.seek(0);
             long pozycja=0;
 
             String nazwa=" ";
             int kondygnacje;
+            long poz=0;
 
 
-
-           while(pozycja<plik.length())
+            while(pozycja<plik.length())
             {
 
 
                 nazwa=plik.readUTF();
-                    kondygnacje=plik.readInt();
+                kondygnacje=plik.readInt();
                 long pozcena=plik.getFilePointer();
                 double cena=plik.readDouble();
 
                 pozycja=plik.getFilePointer();
-              String w=nazwa+" "+kondygnacje+" "+cena;
+                String w=nazwa+" "+kondygnacje+" "+cena;
                 System.out.format("%s\t%d\t%.2f\n",nazwa,kondygnacje,cena);
 
-                if(kondygnacje==1)
+                if(kondygnacje==2)
                 {
-                    long poz=plik.getFilePointer();
-                    plik.seek(pozcena);
-                    cena=cena*0.9;
-                    plik.writeDouble(cena);
-                    plik.seek(poz);
+
+                    plikZAP.seek(plikZAP.length());
+                    cena=cena*0.15;
+                    plikZAP.writeUTF(nazwa);
+                    plikZAP.writeDouble(cena);
+
 
                 }
 
@@ -64,8 +65,6 @@ public class Main {
                     maxdom=nazwa;
                 }
 
-                // w=nazwa+" "+kondygnacje+" "+cena;
-                //System.out.println(w);
 
             }
 
@@ -100,9 +99,9 @@ public class Main {
             plik = new RandomAccessFile(nPl, "rw");
             plik.seek(plik.length());
 
-            plik.writeUTF("Domekparterowy");
-            plik.writeInt(1);
-            plik.writeDouble(59.1794);
+            plik.writeUTF("Dom5");
+            plik.writeInt(2);
+            plik.writeDouble(642.648);
 
             System.out.println("Zapisano do pliku");
 
@@ -116,8 +115,8 @@ public class Main {
 
     public static void main(String[] args)throws IOException, ClassNotFoundException{
 
-        //zapisz("dokument1.txt");
-        Odczyt("dokument1.txt");
+//        zapisz("dokument1.txt");
+        Odczyt("dokument1.txt","PlikZapis.txt");
 
     }
 
